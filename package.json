@@ -4,7 +4,7 @@
   "description": "Fastify demo project",
   "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon src/**.*",
+    "dev": "nodemon -r dotenv/config src/**.*",
     "lint": "echo \"ESLint ...\" && eslint --ext .js src/",
     "start": "node src/app.js"
   },
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/atorov/fastify-demo#readme",
   "type": "module",
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
