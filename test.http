@@ -1,0 +1,2 @@
+### get health status
+GET http://localhost:5000/health HTTP/1.1
