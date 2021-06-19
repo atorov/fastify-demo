@@ -1,0 +1,49 @@
+{
+  "name": "fastify-demo",
+  "version": "1.0.0",
+  "description": "Fastify demo project",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/**.*",
+    "lint": "echo \"ESLint ...\" && eslint --ext .js src/",
+    "start": "node src/app.js"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atorov/fastify-demo.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "node",
+    "nodejs",
+    "fastify",
+    "api",
+    "rest"
+  ],
+  "author": "atorov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atorov/fastify-demo/issues"
+  },
+  "homepage": "https://github.com/atorov/fastify-demo#readme",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.7",
+    "pre-commit": "^1.2.2"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "7.x"
+  },
+  "dependencies": {
+    "fastify": "^3.18.0",
+    "fastify-swagger": "^4.7.0"
+  }
+}
