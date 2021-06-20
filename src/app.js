@@ -4,10 +4,6 @@ import cdsRoutes from './routes/cds/index.js'
 
 const app = fastify({ logger: true })
 
-app.get('/health', (req, reply) => {
-    reply.send({ status: 'Ok' })
-})
-
 app.register(swagger, {
     exposeRoute: true,
     routePrefix: '/docs',
@@ -17,6 +13,26 @@ app.register(swagger, {
         },
     },
 })
+
+app.get(
+    '/health',
+    {
+        schema: {
+            response: {
+                200: {
+                    type: 'object',
+                    properties: {
+                        status: { type: 'string' },
+                    },
+                },
+            },
+        },
+        handler(req, reply) {
+            reply.send({ status: 'Ok' })
+        },
+    },
+)
+
 app.register(cdsRoutes, { prefix: '/cds' })
 
 async function start() {

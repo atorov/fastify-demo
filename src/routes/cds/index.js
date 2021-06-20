@@ -24,14 +24,17 @@ const getSdsServicesOpts = {
 }
 
 const Card = {
-    summary: { type: 'string' },
-    indicator: { type: 'string' },
-    detail: { type: 'string' },
-    source: {
-        type: 'object',
-        properties: {
-            label: { type: 'string' },
-            url: { type: 'string' },
+    type: 'object',
+    properties: {
+        summary: { type: 'string' },
+        indicator: { type: 'string' },
+        detail: { type: 'string' },
+        source: {
+            type: 'object',
+            properties: {
+                label: { type: 'string' },
+                url: { type: 'string' },
+            },
         },
     },
 }
