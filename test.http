@@ -9,9 +9,15 @@ GET http://localhost:5000/cds/cds-services HTTP/1.1
 
 ### invoke cds service by id
 POST http://localhost:5000/cds/cds-services/info-card HTTP/1.1
+Content-Type: application/json
+
+{}
+
 ###
 POST http://localhost:5000/cds/cds-services/warning-card HTTP/1.1
+
 ###
 POST http://localhost:5000/cds/cds-services/critical-card HTTP/1.1
+
 ###
 POST http://localhost:5000/cds/cds-services/something-else HTTP/1.1
