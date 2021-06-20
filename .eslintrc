@@ -44,11 +44,11 @@
         "semi-style": [
             "error",
             "last"
+        ],
+        "import/extensions": [
+            "error",
+            "always"
+            // { "ignorePackages": true }
         ]
-        // "import/extensions": [
-        //     "error",
-        //     "always"
-        //     // { "ignorePackages": true }
-        // ]
     }
 }

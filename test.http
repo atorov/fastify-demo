@@ -1,2 +1,17 @@
 ### get health status
 GET http://localhost:5000/health HTTP/1.1
+
+### get swagger docs
+GET http://localhost:5000/docs HTTP/1.1
+
+### get cds services info
+GET http://localhost:5000/cds/cds-services HTTP/1.1
+
+### invoke cds service by id
+POST http://localhost:5000/cds/cds-services/info-card HTTP/1.1
+###
+POST http://localhost:5000/cds/cds-services/warning-card HTTP/1.1
+###
+POST http://localhost:5000/cds/cds-services/critical-card HTTP/1.1
+###
+POST http://localhost:5000/cds/cds-services/something-else HTTP/1.1
